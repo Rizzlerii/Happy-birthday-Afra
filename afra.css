@@ -1,0 +1,591 @@
+
+body {
+    background-image: url("https://dl.dropbox.com/s/4ubs90vu8bn5zq2/image.gif");
+}
+
+.wish {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 4%;
+  width: 80%;
+  text-align: center;
+  font-size: 3em;
+  color: red;
+  letter-spacing: 0.1em;
+  font-family: cursive;
+  background: -webkit-linear-gradient(#ffff00, #ff1493);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+    transform: scale(1.2) rotate(5deg);
+  }
+  75% {
+    -webkit-filter: hue-rotate(360deg);
+    transform: scale(1.2) rotate(-5deg);
+  }
+}
+
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -125px;
+}
+
+.plate {
+  position: absolute;
+  width: 290px;
+  height: 130px;
+  bottom: -10px;
+  left: -15px;
+  background-color: #ccc;
+  border-radius: 25%;
+  box-shadow: 0 5px 0 0 #000;
+}
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 100px;
+  border-radius: 25%;
+  background-color: #2a0a0a;
+  border: 3px solid #fff;
+  box-shadow: 0 15px 0 0 #2a0a0a, 0 30px 0 0 #2a0a0a, 0 33px 0 0 #fff,
+    0 45px 0 0 #2a0a0a, 0 60px 0 0 #2a0a0a, 0 63px 0 0 #fff, 0 75px 0 0 #2a0a0a,
+    0 90px 0 0 #2a0a0a;
+}
+
+.icing {
+  top: 3px;
+  left: 3px;
+  background-color: #fff;
+  border: 5px dotted #2a0a0a;
+  width: 240px;
+  height: 90px;
+  border-radius: 25%;
+}
+
+.name {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  color: #2a0a0a;
+  font-family: 'Roboto' cursive;
+}
+
+.candle1 {
+  z-index: 10;
+  width: 10px;
+  height: 50px;
+  background-color: #fe2e2e;
+  border-radius: 4px;
+  top: -25px;
+  left: 50%;
+  margin-left: -8px;
+}
+
+.flame1 {
+  border-bottom-left-radius: 45% 35%;
+  border-bottom-right-radius: 45% 35%;
+  box-shadow: 0 -15px 2px 2px #ffc205;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 30px;
+  width: 5px;
+  top: -30px;
+  left: 30%;
+  position: absolute;
+}
+
+.candle2 {
+  z-index: 10;
+  width: 10px;
+  height: 50px;
+  background-color: #fe2e2e;
+  border-radius: 4px;
+  top: -25px;
+  left: 80%;
+  margin-left: -8px;
+}
+
+.flame2 {
+  border-bottom-left-radius: 45% 35%;
+  border-bottom-right-radius: 45% 35%;
+  box-shadow: 0 -15px 2px 2px #ffc205;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 30px;
+  width: 5px;
+  top: -30px;
+  left: 30%;
+  position: absolute;
+}
+
+.candle3 {
+  z-index: 10;
+  width: 10px;
+  height: 50px;
+  background-color: #fe2e2e;
+  border-radius: 4px;
+  top: -25px;
+  left: 20%;
+  margin-left: -8px;
+}
+
+.flame3 {
+  border-bottom-left-radius: 45% 35%;
+  border-bottom-right-radius: 45% 35%;
+  box-shadow: 0 -15px 2px 2px #ffc205;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 30px;
+  width: 5px;
+  top: -30px;
+  left: 30%;
+  position: absolute;
+}
+
+.candle4 {
+  z-index: 10;
+  width: 10px;
+  height: 50px;
+  background-color: #fe2e2e;
+  border-radius: 4px;
+  top: 15px;
+  left: 15%;
+  margin-left: -8px;
+}
+
+.flame4 {
+  border-bottom-left-radius: 45% 35%;
+  border-bottom-right-radius: 45% 35%;
+  box-shadow: 0 -15px 2px 2px #ffc205;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 30px;
+  width: 5px;
+  top: -30px;
+  left: 30%;
+  position: absolute;
+}
+
+.candle5 {
+  z-index: 10;
+  width: 10px;
+  height: 50px;
+  background-color: #fe2e2e;
+  border-radius: 4px;
+  top: 15px;
+  left: 85%;
+  margin-left: -8px;
+}
+
+.flame5 {
+  border-bottom-left-radius: 45% 35%;
+  border-bottom-right-radius: 45% 35%;
+  box-shadow: 0 -15px 2px 2px #ffc205;
+  background-color: yellow;
+  border-radius: 50%;
+  height: 30px;
+  width: 5px;
+  top: -30px;
+  left: 30%;
+  position: absolute;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 80%;
+  width: 90%;
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  font-family: arial cursive;
+  background-color: #ff2bf1;
+}
+
+.pony{
+  background-image: url(images/monkey!.gif);
+  background-size: cover; /* Ensures the image covers the element */
+  position: absolute; /* Positions the element absolutely */
+  top: 260px; /* Positions the element 20px from the top */
+  left: 160px;
+  width: 180px; /* Adjust image size */
+  height: 160px;/* Smaller size for width */
+  animation: bounce 2s infinite; /* Bouncing effect */
+}
+
+.afra {
+  background-image: url(images/Cool\ Text\ -\ AFRAA\ 478723194099959.png);
+  background-size: cover; /* Ensures the image covers the element */
+  position: absolute; /* Positions the element absolutely */
+  top: 100px; /* Positions the element 20px from the top */
+  left: 778px; /* Positions the element 230px from the left */
+  width: 300px; /* Smaller size for width */
+  height: 75px; /* Smaller size for height */
+  animation: bounce 2s infinite; /* Bouncing effect */
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-20px); /* Bounce up */
+  }
+}
+
+/* Moving Animation (Optional) */
+@keyframes move {
+  0% {
+    left: 230px; /* Start position */
+  }
+  50% {
+    left: 300px; /* Move to the right */
+  }
+  100% {
+    left: 230px; /* Return to start */
+  }
+}
+
+/* Add moving effect */
+.afra.moving {
+  animation: move 3s infinite; /* Moving effect */
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #a37c7c;
+ 
+}
+
+.scroller-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 570px;
+  left: 0;
+}
+
+.scroller {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.scroller img {
+  display: inline-block;
+  width: 100px; /* Adjust image width as needed */
+  height: auto;
+  margin-right: 10px; /* Space between images */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+/* Tooltip Container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+/* Tooltip Text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the element */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip Arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Image Container */
+.image-container {
+  position: absolute;
+  top: 299px;
+  left: 750px;
+  display: inline-block;
+  margin: 50px;
+}
+
+/* Jumping Image */
+.jumping-image {
+  width:  180px; /* Adjust image size */
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth transition for jump effect */
+
+}
+
+/* Jump Effect on Hover */
+.image-container:hover .jumping-image {
+  transform: translateY(-20px); /* Move image up */
+}
+
+/* Tooltip Text */
+.tooltip1text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #770092;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 105px; /* Position to the right of the image */
+  top: -50px;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 4px 10px rgb(185, 0, 202);
+
+}
+
+/* Tooltip Arrow (Downwards) */
+.tooltip1text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Position the arrow at the bottom of the tooltip */
+  left: 50%; /* Center the arrow horizontally */
+  margin-left: -5px; /* Adjust to center the arrow */
+  border-width: 5px;
+  border-style: solid;
+  border-color: #770092 transparent transparent transparent; /* Arrow color */
+}
+
+/* Show Tooltip on Hover */
+.image-container:hover .tooltip1text {
+  visibility: visible;
+  opacity: 1;
+}
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Other Content */
+.other-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Drawing Pad Container */
+.drawing-pad-container {
+  position: fixed; /* Fixed positioning */
+  top: 190px; /* Adjust this value to move it down */
+  right: 20px; /* Position on the right side */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Drawing Pad */
+.drawing-pad {
+  background-color: #000000;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgb(185, 0, 202);
+  padding: 15px; /* Reduced padding */
+  text-align: center;
+  width: 300px; /* Smaller width for the drawing pad */
+}
+
+/* Controls */
+.controls {
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.controls label {
+  font-size: 14px; /* Smaller font size */
+  color: #e229ff;
+  margin-right: 1px; /* Reduced margin */
+}
+
+.controls input[type="color"] {
+  border: -4px solid #ffffff;
+  border-radius: 2px;
+  padding: -2px; /* Reduced padding */
+  cursor: pointer;
+}
+
+.controls input[type="range"] {
+  width: 90px; /* Smaller range input */
+  margin-right: 8px; /* Reduced margin */
+}
+
+.controls button {
+  background-color: #d70cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #550250;
+}
+
+/* Canvas */
+#drawing-canvas {
+  border: 2px solid #de09ff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  cursor: crosshair;
+  width: 250px; /* Smaller canvas width */
+  height: 200px; /* Smaller canvas height */
+}
+.from{
+  background-image: url(images/Cool\ Text\ -\ DRAW\ 478731413270736.png);
+  background-size: cover;
+  position: absolute; /* Positions the element absolutely */
+  top: 100px; /* Positions the element 20px from the top */
+  left: 1120px; /* Positions the element 230px from the left */
+  width: 142px; /* Smaller size for width */
+  height: 45px; /* Smaller size for height */
+  animation: bounce 2s infinite; /* Bouncing effect */
+}
+.anything{
+  background-image: url(images/Cool\ Text\ -\ ANYTHING\ 478731425406257.png);
+  background-size: cover;
+  position: absolute; /* Positions the element absolutely */
+  top: 150px; /* Positions the element 20px from the top */
+  left: 1160px; /* Positions the element 230px from the left */
+  width: 199px; /* Smaller size for width */
+  height: 35px; /* Smaller size for height */
+  animation: bounce 2s infinite; /* Bouncing effect */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #a37c7c;
+}
+
+.image-lineup {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 500px;
+  left: 20px;
+}
+
+.image {
+  display: inline-block;
+  white-space: nowrap;
+  /* Remove or comment out the animation */
+  /* animation: scroll 20s linear infinite; */
+}
+
+.image img {
+  display: inline-block;
+  width: 100px; /* Adjust image width as needed */
+  height: auto;
+  margin-right: 10px; /* Space between images */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Other Content */
+.other-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Jumping Note Styles */
+.jumping-note {
+  width: 200px; /* Width of the note */
+  padding: 5px;
+  background-color: #fff3b0; /* Light yellow background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-size: 16px;
+  animation: jump-note 3s infinite ease-in-out; /* Jump animation */
+  position: fixed; /* Fixed position to avoid affecting other content */
+  top: 210px;
+  left: 840px; /* Position at the bottom */
+  right: 20px; /* Position on the right */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Jump Animation */
+@keyframes jump-note {
+  0%, 100% {
+      transform: translateY(0); /* Start and end position */
+  }
+  50% {
+      transform: translateY(-10px); /* Move up */
+  }
+}
