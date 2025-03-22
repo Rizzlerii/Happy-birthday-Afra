@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HAPPY BIRTHDAY!!!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <!-- My Stylesheet -->
+  <link rel="stylesheet" href="afra.css">
+</head>
+<body>
+  <div class="jumping-note">
+    <p>Check out the cat for a SURPRISE !!</p>
+</div>
+
+<div class="image-lineup">
+    <img src="images/e4bcf99612061c1f17d049c1a769bd9aabb523eb.gif" alt="Image 1" class="image">
+    <img src="images/tumblr_ac192a176530d27f116dfdca929be9d3_a8c7e972_250.gif" alt="Image 2" class="image">
+    <img src="images/tumblr_7a5977771582f1056e49bfd33eee6764_6d374c9f_250.webp" alt="Image 2" class="image">
+</div>
+
+
+<div class="anything"></div>
+<div class="from"></div>
+<div class="drawing-pad-container">
+    <div class="drawing-pad">
+        <!-- Controls -->
+        <div class="controls">
+            <label for="color-picker">Color:</label>
+            <input type="color" id="color-picker" value="#000000">
+
+            <label for="brush-size">Brush Size:</label>
+            <input type="range" id="brush-size" min="1" max="50" value="5">
+
+            <button id="clear-btn">Clear Canvas</button>
+        </div>
+
+        <!-- Drawing Canvas -->
+        <canvas id="drawing-canvas"></canvas>
+    </div>
+</div>
+<script>
+ // Get elements
+const canvas = document.getElementById('drawing-canvas');
+const ctx = canvas.getContext('2d');
+const colorPicker = document.getElementById('color-picker');
+const brushSize = document.getElementById('brush-size');
+const clearBtn = document.getElementById('clear-btn');
+
+// Set canvas size to match the smaller CSS size
+canvas.width = 250; // Rendering width (matches CSS width)
+canvas.height = 200; // Rendering height (matches CSS height)
+
+// Ensure CSS size matches rendering size
+canvas.style.width = `${canvas.width}px`;
+canvas.style.height = `${canvas.height}px`;
+
+// Calculate scaling factor
+const rect = canvas.getBoundingClientRect();
+const scaleX = canvas.width / rect.width;
+const scaleY = canvas.height / rect.height;
+
+// Drawing variables
+let isDrawing = false;
+let currentColor = '#000000';
+let currentSize = 5;
+
+// Set initial brush color and size
+colorPicker.value = currentColor;
+brushSize.value = currentSize;
+
+// Event Listeners
+colorPicker.addEventListener('input', (e) => {
+    currentColor = e.target.value;
+});
+
+brushSize.addEventListener('input', (e) => {
+    currentSize = e.target.value;
+});
+
+clearBtn.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+// Drawing functions
+canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    ctx.beginPath();
+    const x = (e.clientX - rect.left) * scaleX;
+    const y = (e.clientY - rect.top) * scaleY;
+    ctx.moveTo(x, y);
+});
+
+canvas.addEventListener('mousemove', (e) => {
+    if (isDrawing) {
+        const x = (e.clientX - rect.left) * scaleX;
+        const y = (e.clientY - rect.top) * scaleY;
+        ctx.lineTo(x, y);
+        ctx.strokeStyle = currentColor;
+        ctx.lineWidth = currentSize;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+    }
+});
+
+canvas.addEventListener('mouseup', () => {
+    isDrawing = false;
+    ctx.closePath();
+});
+
+canvas.addEventListener('mouseout', () => {
+    isDrawing = false;
+    ctx.closePath();
+});
+ </script>
+  <div class="afra"></div>
+  <div class="wish">
+    Happy Birthday
+  </div>
+  <div class="cake">
+    <div class="plate"></div>
+    <div class="layer"></div>
+    <div class="icing">
+      <div class="name">
+        <p>Happy Birthday <br /> <span id="name">AFRA!!</span></p>
+      </div>
+    </div>
+    <div class="candle1">
+      <div class="flame1"></div>
+    </div>
+    <div class="candle2">
+      <div class="flame2"></div>
+    </div>
+    <div class="candle3">
+      <div class="flame3"></div>
+    </div>
+    <div class="candle4">
+      <div class="flame4"></div>
+    </div>
+    <div class="candle5">
+      <div class="flame5"></div>
+    </div>
+  </div>
+  <div class="text">May all your dreams come true and May God crown you with all the success in life. Wishing you many returns of this day, CAKE KHAOASH. Happy birthday AFRA,! From, FATIMA !!!
+  </div>
+
+
+  
+        <audio id="HBD" loop>
+
+            <source src="https://dl.dropbox.com/s/57hjcyz47o4us25/audio.mp3">
+
+        </audio>
+        <div class="container">
+          <!-- Timestamp -->
+          <div class="timestamp">
+            
+          </div>
+  
+          <style>
+            /* General Styles */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+    
+            #calendar-container {
+                margin-left: 60px; /* 60px from the left */
+            }
+    
+            /* Clock Styles */
+            .clock {
+                font-size: 20px;
+                letter-spacing: 4px;
+                text-align: center;
+                background-color: #c9ffc9;
+                border-top: 3px ridge #feaaff;
+                border-left: 3px ridge #feaaff;
+                border-right: 3px ridge #feaaff;
+                color: black;
+                border-bottom: none;
+                width: 193px;
+                margin-left: 0px;
+                padding: 10px;
+            }
+    
+            /* Calendar Styles */
+            .calendar {
+                background-color: #fd86ff;
+                border: 3px ridge #feaaff;
+                color: black;
+                font-size: 12px;
+                padding: 10px;
+                width: 200px;
+                margin-top: 10px;
+            }
+    
+            .calendar table {
+                width: 100%;
+                text-align: center;
+                border-collapse: collapse;
+            }
+    
+            .calendar th,
+            .calendar td {
+                padding: 5px;
+                border: 1px solid #ddd;
+            }
+    
+            .calendar th {
+                background-color: #fffed1;
+                font-weight: bold;
+            }
+    
+            .calendar td {
+                background-color: #fffed1;
+                color: black;
+            }
+    
+            .calendar td:hover {
+                background-color: #f0f0f0;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+  <body>
+      <div id="calendar-container">
+        <div id="MyClockDisplay" class="clock" onload="showTime()" style="font-size: 20px;letter-spacing: 4px;text-align:center;background-color:#c93ef7;border-top:3px ridge #99f6ff;border-left:3px ridge #70e8fd;border-right:3px ridge #82fdfd;color:rgb(90, 222, 255);border-bottom:none;width:193px;margin-left:0px"></div>
+
+        <script type="text/javascript">function showTime(){
+          var date = new Date();
+          var h = date.getHours(); // 0 - 23
+          var m = date.getMinutes(); // 0 - 59
+          var s = date.getSeconds(); // 0 - 59
+          var session = "AM";
+          
+          if(h == 0){
+              h = 12;
+          }
+          
+          if(h > 12){
+              h = h - 12;
+              session = "PM";
+          }
+          
+          h = (h < 10) ? "0" + h : h;
+          m = (m < 10) ? "0" + m : m;
+          s = (s < 10) ? "0" + s : s;
+          
+          var time = h + ":" + m + ":" + s + " " + session;
+          document.getElementById("MyClockDisplay").innerText = time;
+          document.getElementById("MyClockDisplay").textContent = time;
+          
+          setTimeout(showTime, 1000);
+          
+      }
+      
+      showTime();</script>
+      <div class="calendar" align="center" style="background-color: #e552ff;border: 3px ridge #ff33e7;color:black;font-size: 12px;">
+      <script text="JavaScript">
+       
+      monthnames = new Array(
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      );
+      var linkcount = 0;
+      class addlink {
+        constructor(month, day, href) {
+          var entry = new Array(3);
+          entry[0] = month;
+          entry[1] = day;
+          entry[2] = href;
+          this[(linkcount += 1)] = entry;
+        }
+      }
+       
+      Array.prototype.addlink = addlink;
+      linkdays = [];
+      monthdays = new Array(12);
+      monthdays[0] = 31;
+      monthdays[1] = 28;
+      monthdays[2] = 31;
+      monthdays[3] = 30;
+      monthdays[4] = 31;
+      monthdays[5] = 30;
+      monthdays[6] = 31;
+      monthdays[7] = 31;
+      monthdays[8] = 30;
+      monthdays[9] = 31;
+      monthdays[10] = 30;
+      monthdays[11] = 31;
+      todayDate = new Date();
+      thisday = todayDate.getDay();
+      thismonth = todayDate.getMonth();
+      thisdate = todayDate.getDate();
+      thisyear = todayDate.getYear();
+      thisyear = thisyear % 100;
+      thisyear = thisyear < 50 ? 2000 + thisyear : 1900 + thisyear;
+      if ((thisyear % 4 === 0 && !(thisyear % 100 === 0)) || thisyear % 400 === 0) {
+        monthdays[1] += 1;
+      }
+      startspaces = thisdate;
+      while (startspaces > 7) {
+        startspaces -= 7;
+      }
+      startspaces = thisday - startspaces + 1;
+      if (startspaces < 0) {
+        startspaces += 7;
+      }
+      document.write("<font face='arial'>");
+      document.write('<table border=0 ');
+      document.write(' style="text-align: center;" cellpadding=2 cellspacing=4>');
+      document.write(
+        '<tr><td colspan=7><center>' +
+        monthnames[thismonth] +
+        ' ' +
+        thisyear +
+        '</strong></center></font></td></tr>'
+      );
+      document.write('<tr>');
+      document.write('<td align=center><b>S</b></td>');
+      document.write('<td align=center><b>M</b></td>');
+      document.write('<td align=center><b>T</b></td>');
+      document.write('<td align=center><b>W</b></td>');
+      document.write('<td align=center><b>T</b></td>');
+      document.write('<td align=center><b>F</b></td>');
+      document.write('<td align=center><b>S</b></td>');
+      document.write('</tr>');
+      document.write('<tr>');
+      for (s = 0; s < startspaces; s += 1) {
+        document.write('<td> </td>');
+      }
+      count = 1;
+      while (count <= monthdays[thismonth]) {
+        for (b = startspaces; b < 7; b += 1) {
+          linktrue = false;
+          document.write('<td>');
+          for (c = 0; c < linkdays.length; c += 1) {
+            if (linkdays[c] != null) {
+              if (linkdays[c][0] === thismonth + 1 && linkdays[c][1] === count) {
+                document.write('<a href="' + linkdays[c][2] + '">');
+                linktrue = true;
+              }
+            }
+          }
+          if (count === thisdate) {
+            document.write("<b><font color='#e36499'></b>");
+          }
+          if (count <= monthdays[thismonth]) {
+            document.write(count);
+          } else {
+            document.write(' ');
+          }
+          if (count === thisdate) {
+            document.write('</font>');
+          }
+          if (linktrue) {
+            document.write('</a>');
+          }
+          document.write('</td>');
+          count += 1;
+        }
+        document.write('</tr>');
+        document.write('<tr>');
+        startspaces = 0;
+      }
+      document.write('</table></p>');
+      </script>
+       
+      </font></div>
+      </div>
+      
+<style>
+/* Clock Styles */
+.clock {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-align: center;
+    background-color: #c9ffc9;
+    border-top: 3px ridge #feaaff;
+    border-left: 3px ridge #feaaff;
+    border-right: 3px ridge #feaaff;
+    color: black;
+    border-bottom: none;
+    width: 193px;
+    margin-left: 0px;
+    padding: 10px;
+    margin-top: 20px; 
+}
+
+/* Calendar Styles */
+.calendar {
+    background-color: #feaaff;
+    border: 3px ridge #feaaff;
+    color: black;
+    font-size: 12px;
+    padding: 10px;
+    width: 200px;
+    margin-top: 4px; /* Move the calendar down */
+}
+
+    
+  td{
+      background:#fffed1;
+      color:black;
+  }
+
+</style> 
+
+        </div>
+        <div class="scroller-container">
+          <div class="scroller">
+              <img src="images/kity.gif" alt="Image 1">
+              <img src="images/eatingchaps.gif" alt="Image 2">
+              <img src="images/button_34.gif" alt="Image 3">
+              <img src="images/borgorshark.gif" alt="Image 4">
+              <img src="images/callie.gif" alt="Image 5">
+              <img src="images/catirl.gif" alt="Image 6">
+              <img src="images/cookie.webp" alt="Image 7">
+              <img src="images/musicismyliiife.gif" alt="Image 8">
+              <img src="images/jerma_walk_stamp_by_kingokingobeat_def5lec.gif" alt="Image 9">
+              <img src="images/iheartstamps.gif" alt="Image 10">
+              <img src="images/jermabreakitDOWN.gif" alt="Image 11">
+              <img src="images/kedamono.gif" alt="Image 12">
+              <img src="images/kity.gif" alt="Image 13">
+              <img src="images/nekoatsume.gif" alt="Image 14">
+              <img src="images/rotatingpinkcat.gif" alt="Image 15">
+              <!-- Duplicate images for seamless looping -->
+              <img src="images/okami_stamp_2_by_kevfin_d39rv71.png" alt="Image 1">
+              <img src="images/phoenixcoffee.gif" alt="Image 2">
+              <img src="images/tumblr_568c1deda46e23e384d752cdcbf17f39_ae3e29e5_100.webp" alt="Image 3">
+              <img src="images/tumblr_2c481804ef95ba9ef0d9000eba978d73_0f4dd401_100.gif" alt="Image 4">
+              <img src="images/thedog.gif" alt="Image 5">
+              <img src="images/button_34.gif" alt="Image 6">
+              <img src="images/borgorshark.gif" alt="Image 7">
+              <img src="images/callie.gif"alt="Image 8">
+              <img src="images/musicismyliiife.gif" alt="Image 9">
+              <img src="images/jerma_walk_stamp_by_kingokingobeat_def5lec.gif" alt="Image 10">
+              <img src="images/iheartstamps.gif"  alt="Image 11">
+              <img src="images/jermabreakitDOWN.gif" alt="Image 12">
+              <img src="images/kedamono.gif"alt="Image 13">
+              <img src="images/nekoatsume.gif" alt="Image 14">
+              <img src="images/tumblr_38441dd588e4ced837c56e592b179792_76fd6a23_100.webp" alt="Image 15">
+          </div>
+      </div>
+         
+  <div class="tooltip">
+    <img src="images/fat.png" alt="Example Image" width="100">
+    <span class="tooltiptext">Yo I MISS U!</span>
+</div>
+ <!-- Image with Jump Effect and Tooltip -->
+<div class="image-container">
+  <a href="afragame.html" target="_blank">
+  <img src="images/back.jpeg" alt="Jumping Image" class="jumping-image">
+  <span class="tooltip1text">CLICK TO PLAY A GAME!</span>
+</div><div class="pony"></div>
+
+
+
+<style>
+  /* Custom Cursor */
+  * {
+      cursor: url(https://cur.cursors-4u.net/holidays/hol-5/hol411.ani), url(https://cur.cursors-4u.net/holidays/hol-5/hol411.gif), auto !important;
+  }
+
+  /* Animation Keyframes */
+  @keyframes tilter {
+      0% {
+          transform: rotate(-10deg);
+      }
+      10% {
+          transform: rotate(-8deg);
+      }
+      25% {
+          transform: rotate(0deg);
+      }
+      40% {
+          transform: rotate(8deg);
+      }
+      50% {
+          transform: rotate(10deg);
+      }
+      60% {
+          transform: rotate(8deg);
+      }
+      90% {
+          transform: rotate(-8deg);
+      }
+      100% {
+          transform: rotate(-10deg);
+      }
+  }
+
+  /* Apply Animation */
+  #Tilter.moveAnimation {
+      animation: tilter 1.3s infinite linear;
+  }
+</style>
+</head>
+<body>
+<!-- Cursor Credit Link -->
+<a href="https://www.cursors-4u.com/cursor/2011/12/05/dangling-purple-hearts.html" target="_blank" title="Dangling Purple Hearts">
+  <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Dangling Purple Hearts" style="position:absolute; top: 0px; right: 0px;">
+</a>
+
+<!-- Animated Image -->
+<img src="https://jamesland.org/Code_Templates/Test/ずんだもん2.png" id="Tilter" class="moveAnimation" style="position: absolute; left: 300px; top: 96px; width: 240px; height: 300px;">
+
+
+
+<script type="afra.js"></script>
+</body>
+</html>
